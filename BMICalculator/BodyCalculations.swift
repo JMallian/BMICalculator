@@ -11,7 +11,8 @@ import Foundation
 class BodyCalculations {
     //TODO: probably a bunch of static methods, write tests!
     static func getBMI(heightInInches height: Int, weightInPounds weight: Int) -> Double {
-        return (Double(height/weight)) * 703
+        let result = (Double(weight) / Double(height * height)) * 703.0
+        return (result.rounded()) 
     }
     
     static func getBMI(heightInCentimeters height: Int, weightInKilograms weight: Int) -> Double {

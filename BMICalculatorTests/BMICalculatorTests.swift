@@ -24,6 +24,12 @@ class BMICalculatorTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        XCTAssert(true)
+    }
+    
+    func testBMIImperial1() {
+        let bmi = BodyCalculations.getBMI(heightInInches: 66, weightInPounds: 126)
+        XCTAssertEqual(bmi, 20.3)
     }
     
     func testPerformanceExample() {
