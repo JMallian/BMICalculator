@@ -14,6 +14,7 @@
 		4C6AB9F42121A96F00BFCF14 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6AB9F22121A96F00BFCF14 /* LaunchScreen.storyboard */; };
 		4C6AB9FF2121A97000BFCF14 /* BMICalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6AB9FE2121A97000BFCF14 /* BMICalculatorTests.swift */; };
 		4C6ABA0A2121A97000BFCF14 /* BMICalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6ABA092121A97000BFCF14 /* BMICalculatorUITests.swift */; };
+		4C6ABA182121A9A700BFCF14 /* BodyCalculations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6ABA172121A9A700BFCF14 /* BodyCalculations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		4C6ABA052121A97000BFCF14 /* BMICalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BMICalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6ABA092121A97000BFCF14 /* BMICalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMICalculatorUITests.swift; sourceTree = "<group>"; };
 		4C6ABA0B2121A97000BFCF14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C6ABA172121A9A700BFCF14 /* BodyCalculations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BodyCalculations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				4C6AB9F02121A96F00BFCF14 /* Assets.xcassets */,
 				4C6AB9F22121A96F00BFCF14 /* LaunchScreen.storyboard */,
 				4C6AB9F52121A96F00BFCF14 /* Info.plist */,
+				4C6ABA172121A9A700BFCF14 /* BodyCalculations.swift */,
 			);
 			path = BMICalculator;
 			sourceTree = "<group>";
@@ -258,6 +261,7 @@
 			files = (
 				4C6AB9EC2121A96200BFCF14 /* ViewController.swift in Sources */,
 				4C6AB9EA2121A96200BFCF14 /* AppDelegate.swift in Sources */,
+				4C6ABA182121A9A700BFCF14 /* BodyCalculations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
