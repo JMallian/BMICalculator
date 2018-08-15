@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalculateViewController: UIViewController {
+class CalculateViewController: UIViewController, UITextFieldDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +20,11 @@ class CalculateViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    //MARK: UITextFieldDelegate methods
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 
 }
 

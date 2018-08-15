@@ -26,10 +26,10 @@
             </objects>
             <point key="canvasLocation" x="-373" y="69"/>
         </scene>
-        <!--View Controller-->
+        <!--Calculate View Controller-->
         <scene sceneID="Sfo-3Q-SSx">
             <objects>
-                <viewController id="1m7-xV-CsO" sceneMemberID="viewController">
+                <viewController id="1m7-xV-CsO" customClass="CalculateViewController" customModule="BMICalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jMj-HS-Uvr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -119,10 +119,10 @@
             </objects>
             <point key="canvasLocation" x="484" y="69"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="ceK-uH-Edd">
             <objects>
-                <viewController id="o9h-5y-ARu" sceneMemberID="viewController">
+                <viewController id="o9h-5y-ARu" customClass="ResultsViewController" customModule="BMICalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kqS-TX-ygM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
