@@ -16,7 +16,8 @@ class BodyCalculations {
     }
     
     static func getBMI(heightInCentimeters height: Int, weightInKilograms weight: Int) -> Double {
-        return 2
+        let result = (Double(weight) / Double(height * height)) * 703.0
+        return result
     }
     
     static func getBMI(heightInInches height: Int, weightInKilograms weight: Int) -> Double {

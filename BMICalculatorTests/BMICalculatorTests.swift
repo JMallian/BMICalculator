@@ -32,6 +32,11 @@ class BMICalculatorTests: XCTestCase {
         XCTAssertEqual(bmi, 20.3)
     }
     
+    func testMetrict() {
+        let bmi = BodyCalculations.getBMI(heightInCentimeters: 168, weightInKilograms: 56)
+        XCTAssertEqual(bmi, 19.8)
+    }
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {
