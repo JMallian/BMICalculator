@@ -114,6 +114,10 @@
                         <viewLayoutGuide key="safeArea" id="70m-HB-VMk"/>
                     </view>
                     <navigationItem key="navigationItem" id="qlG-Rq-om4"/>
+                    <connections>
+                        <outlet property="heightTextField" destination="8av-yd-0dM" id="Rju-tn-TBV"/>
+                        <outlet property="weightTextField" destination="R5b-im-x1l" id="pKk-dJ-i9t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vS9-FW-DPm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
