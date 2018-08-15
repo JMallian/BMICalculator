@@ -28,10 +28,20 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
+    func textFieldShouldClear(_ textField: UITextField) -> Bool {
+        //use this to clear default text the first time user enters something?
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        //only want user to enter whole numbers
+    }
+    
+
+    
     //MARK: functions to declutter other functions
     func setupDelegates() {
         self.heightTextField.delegate = self
-        self.weightTextField.delegate = self 
+        self.weightTextField.delegate = self
     }
 
 }
