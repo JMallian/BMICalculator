@@ -11,6 +11,10 @@ import UIKit
 class CalculateViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var heightTextField: UITextField!
     @IBOutlet weak var weightTextField: UITextField!
+    @IBOutlet weak var heightSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var weightSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var calculateButton: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

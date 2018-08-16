@@ -115,7 +115,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="qlG-Rq-om4"/>
                     <connections>
+                        <outlet property="calculateButton" destination="wn6-wg-whd" id="iiY-DW-J71"/>
+                        <outlet property="heightSegmentedControl" destination="7ve-mJ-Of6" id="ak7-g9-9RN"/>
                         <outlet property="heightTextField" destination="8av-yd-0dM" id="Rju-tn-TBV"/>
+                        <outlet property="weightSegmentedControl" destination="JOw-04-cus" id="53v-WW-aum"/>
                         <outlet property="weightTextField" destination="R5b-im-x1l" id="pKk-dJ-i9t"/>
                     </connections>
                 </viewController>
