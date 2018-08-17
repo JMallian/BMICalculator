@@ -36,18 +36,21 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     //MARK calculate button methods
     @IBAction func calculateButtonPressed(_ sender: Any) {
         if(bothTextFieldsHaveInput()) {
-            //push ResultsViewController
+            let vc = ResultsViewController();
+            vc.view.backgroundColor = .blue //temp, actually need to pass it a bmi 
+            navigationController?.pushViewController(vc, animated: true)
+            
         }else{
             tellUserToEnterInput()
         }
     }
     
     func bothTextFieldsHaveInput() -> Bool {
-        return false
+        return (heightTextField.text != "" && weightTextField.text != "")
     }
     
     func tellUserToEnterInput() {
-        //TODO: make this look better, indicate which textField needs info
+        //TODO: make this look better (text bigger!), indicate which textField needs info
         displayInfoToUser.text = "hey there, enter some info"
     }
     
