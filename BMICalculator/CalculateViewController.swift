@@ -27,6 +27,11 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
         setupPlaceholderText()
         setupTitlesForSegmentedControls()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        clearLabelsAndTextFields()
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -37,7 +42,7 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     @IBAction func calculateButtonPressed(_ sender: Any) {
         if(bothTextFieldsHaveInput()) {
             let vc = ResultsViewController();
-            vc.view.backgroundColor = .blue //temp, actually need to pass it a bmi 
+            vc.view.backgroundColor = .blue //temp, actually need to pass it a bmi
             navigationController?.pushViewController(vc, animated: true)
             
         }else{
@@ -94,6 +99,12 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
         heightSegmentedControl.setTitle("Metric", forSegmentAt: 1)
         weightSegmentedControl.setTitle("Imperial", forSegmentAt: 0)
         weightSegmentedControl.setTitle("Metric", forSegmentAt: 1)
+    }
+    
+    func clearLabelsAndTextFields() {
+        weightTextField.text = ""
+        heightTextField.text = ""
+        displayInfoToUser.text = "" 
     }
 
     //MARK: this will figure out which function to call in BodyCalculator, may be temporary
