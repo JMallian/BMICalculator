@@ -14,6 +14,8 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var heightSegmentedControl: UISegmentedControl!
     @IBOutlet weak var weightSegmentedControl: UISegmentedControl!
     @IBOutlet weak var calculateButton: UIButton!
+    let heightPlaceholderText = "Height"
+    let weightPlaceholderText = "Weight"
     
     
     override func viewDidLoad() {
@@ -34,9 +36,8 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func textFieldShouldClear(_ textField: UITextField) -> Bool {
-        //use this to clear default text the first time user enters something?
-        return true
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -60,8 +61,8 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     }
     
     func setupPlaceholderText() {
-        weightTextField.placeholder = "Weight"
-        heightTextField.placeholder = "Height"
+        weightTextField.placeholder = weightPlaceholderText
+        heightTextField.placeholder = heightPlaceholderText
     }
 
 }
