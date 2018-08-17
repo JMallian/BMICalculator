@@ -90,8 +90,8 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
                 //height metric, weight imperial
                 bmi = BodyCalculations.getBMI(heightInCentimeters: height, weightInPounds: weight)
             }else{
-                //height metric, weight metric 
-                bmi = BodyCalculations.getBMI(heightInCentimeters: <#T##Int#>, weightInKilograms: <#T##Int#>)
+                //height metric, weight metric
+                bmi = BodyCalculations.getBMI(heightInCentimeters: height, weightInKilograms: weight)
             }
         }
     }
