@@ -70,6 +70,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
                                 <state key="normal" title="Calculate"/>
+                                <connections>
+                                    <action selector="calculateButtonPressed:" destination="1m7-xV-CsO" eventType="touchUpInside" id="ole-YM-bv5"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter height and weight rounded to nearest whole number." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="esc-sA-w18">
                                 <rect key="frame" x="0.0" y="79" width="375" height="60"/>
@@ -115,7 +118,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="qlG-Rq-om4"/>
                     <connections>
-                        <outlet property="calculateButton" destination="wn6-wg-whd" id="iiY-DW-J71"/>
                         <outlet property="heightSegmentedControl" destination="7ve-mJ-Of6" id="ak7-g9-9RN"/>
                         <outlet property="heightTextField" destination="8av-yd-0dM" id="Rju-tn-TBV"/>
                         <outlet property="weightSegmentedControl" destination="JOw-04-cus" id="53v-WW-aum"/>

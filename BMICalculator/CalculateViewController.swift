@@ -13,7 +13,7 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var heightSegmentedControl: UISegmentedControl!
     @IBOutlet weak var weightSegmentedControl: UISegmentedControl!
-    @IBOutlet weak var calculateButton: UIButton!
+
     let heightPlaceholderText = "Height"
     let weightPlaceholderText = "Weight"
 
@@ -31,6 +31,12 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    //MARK calculate button methods
+    @IBAction func calculateButtonPressed(_ sender: Any) {
+        print("woah, that tickles")
+    }
+    
 
     //MARK: UITextFieldDelegate methods
     //keyboard will disappear when Return is pressed
@@ -74,9 +80,9 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     }
 
     //MARK: this will figure out which function to call in BodyCalculator, may be temporary
-    func getBMI(height: Int, weight: Int) {
+    func getBMI(height: Int, weight: Int) -> Double {
         //see how the segmentedControls are set
-        let bmi: Int
+        let bmi: Double
         if(heightSegmentedControl.selectedSegmentIndex == 0) {
             if(weightSegmentedControl.selectedSegmentIndex == 0) {
                 //height imperial, weight imperial
@@ -94,6 +100,7 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
                 bmi = BodyCalculations.getBMI(heightInCentimeters: height, weightInKilograms: weight)
             }
         }
+        return bmi
     }
 }
 
