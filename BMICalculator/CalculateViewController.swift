@@ -16,6 +16,7 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var calculateButton: UIButton!
     let heightPlaceholderText = "Height"
     let weightPlaceholderText = "Weight"
+
     
     
     override func viewDidLoad() {
@@ -23,6 +24,7 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
         setupDelegates()
         setupKeyboards()
         setupPlaceholderText()
+        setupTitlesForSegmentedControls()
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +33,7 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     }
 
     //MARK: UITextFieldDelegate methods
+    //keyboard will disappear when Return is pressed
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -47,8 +50,6 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
         return allowedSet.isSuperset(of: inputSet as CharacterSet)
     }
     
-
-    
     //MARK: functions to declutter other functions
     func setupDelegates() {
         self.heightTextField.delegate = self
@@ -64,6 +65,35 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
         weightTextField.placeholder = weightPlaceholderText
         heightTextField.placeholder = heightPlaceholderText
     }
+    
+    func setupTitlesForSegmentedControls() {
+        heightSegmentedControl.setTitle("Imperial", forSegmentAt: 0)
+        heightSegmentedControl.setTitle("Metric", forSegmentAt: 1)
+        weightSegmentedControl.setTitle("Imperial", forSegmentAt: 0)
+        weightSegmentedControl.setTitle("Metric", forSegmentAt: 1)
+    }
 
+    //MARK: this will figure out which function to call in BodyCalculator, may be temporary
+    func getBMI(height: Int, weight: Int) {
+        //see how the segmentedControls are set
+        let bmi: Int
+        if(heightSegmentedControl.selectedSegmentIndex == 0) {
+            if(weightSegmentedControl.selectedSegmentIndex == 0) {
+                //height imperial, weight imperial
+                bmi = BodyCalculations.getBMI(heightInInches: height, weightInPounds: weight)
+            }else{
+                //height imperial, weight metric
+                bmi = BodyCalculations.getBMI(heightInInches: height, weightInKilograms: weight)
+            }
+        }else{
+            if(weightSegmentedControl.selectedSegmentIndex == 0) {
+                //height metric, weight imperial
+                bmi = BodyCalculations.getBMI(heightInCentimeters: height, weightInPounds: weight)
+            }else{
+                //height metric, weight metric 
+                bmi = BodyCalculations.getBMI(heightInCentimeters: <#T##Int#>, weightInKilograms: <#T##Int#>)
+            }
+        }
+    }
 }
 
