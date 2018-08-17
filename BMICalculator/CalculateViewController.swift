@@ -13,7 +13,8 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var weightTextField: UITextField!
     @IBOutlet weak var heightSegmentedControl: UISegmentedControl!
     @IBOutlet weak var weightSegmentedControl: UISegmentedControl!
-
+    @IBOutlet weak var displayInfoToUser: UILabel!
+    
     let heightPlaceholderText = "Height"
     let weightPlaceholderText = "Weight"
 
@@ -34,7 +35,20 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     
     //MARK calculate button methods
     @IBAction func calculateButtonPressed(_ sender: Any) {
-        print("woah, that tickles")
+        if(bothTextFieldsHaveInput()) {
+            //push ResultsViewController
+        }else{
+            tellUserToEnterInput()
+        }
+    }
+    
+    func bothTextFieldsHaveInput() -> Bool {
+        return false
+    }
+    
+    func tellUserToEnterInput() {
+        //TODO: make this look better, indicate which textField needs info
+        displayInfoToUser.text = "hey there, enter some info"
     }
     
 

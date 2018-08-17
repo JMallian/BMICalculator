@@ -92,6 +92,12 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8yU-pv-cEY">
+                                <rect key="frame" x="0.0" y="499" width="375" height="168"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -102,9 +108,11 @@
                             <constraint firstItem="JOw-04-cus" firstAttribute="top" secondItem="R5b-im-x1l" secondAttribute="bottom" id="B6A-19-VIE"/>
                             <constraint firstItem="7ve-mJ-Of6" firstAttribute="leading" secondItem="70m-HB-VMk" secondAttribute="leading" id="Cbj-cH-TT4"/>
                             <constraint firstItem="R5b-im-x1l" firstAttribute="top" secondItem="7ve-mJ-Of6" secondAttribute="bottom" constant="15" id="DMH-M3-6vk"/>
+                            <constraint firstItem="8yU-pv-cEY" firstAttribute="top" secondItem="wn6-wg-whd" secondAttribute="bottom" constant="15" id="DMb-zo-buS"/>
                             <constraint firstItem="70m-HB-VMk" firstAttribute="trailing" secondItem="wn6-wg-whd" secondAttribute="trailing" id="HK6-f3-T1y"/>
                             <constraint firstItem="8av-yd-0dM" firstAttribute="trailing" secondItem="70m-HB-VMk" secondAttribute="trailing" id="LCq-Ln-eCA"/>
                             <constraint firstItem="8av-yd-0dM" firstAttribute="top" secondItem="esc-sA-w18" secondAttribute="bottom" constant="15" id="Q3Q-c5-Yrk"/>
+                            <constraint firstItem="70m-HB-VMk" firstAttribute="bottom" secondItem="8yU-pv-cEY" secondAttribute="bottom" id="S30-Gy-qXa"/>
                             <constraint firstItem="wn6-wg-whd" firstAttribute="leading" secondItem="jMj-HS-Uvr" secondAttribute="leading" id="Sey-J2-bGf"/>
                             <constraint firstItem="wn6-wg-whd" firstAttribute="top" secondItem="JOw-04-cus" secondAttribute="bottom" constant="15" id="bYR-9X-Vcb"/>
                             <constraint firstAttribute="trailing" secondItem="esc-sA-w18" secondAttribute="trailing" id="dK1-qv-bge"/>
@@ -112,12 +120,15 @@
                             <constraint firstItem="7ve-mJ-Of6" firstAttribute="top" secondItem="8av-yd-0dM" secondAttribute="bottom" id="f51-Jx-XHV"/>
                             <constraint firstItem="JOw-04-cus" firstAttribute="leading" secondItem="70m-HB-VMk" secondAttribute="leading" id="fas-89-a9T"/>
                             <constraint firstItem="esc-sA-w18" firstAttribute="top" secondItem="70m-HB-VMk" secondAttribute="top" constant="15" id="mUL-Rc-ZTm"/>
+                            <constraint firstItem="70m-HB-VMk" firstAttribute="trailing" secondItem="8yU-pv-cEY" secondAttribute="trailing" id="p3t-Sg-1bt"/>
                             <constraint firstItem="7ve-mJ-Of6" firstAttribute="trailing" secondItem="70m-HB-VMk" secondAttribute="trailing" id="rKU-lv-kYp"/>
+                            <constraint firstItem="8yU-pv-cEY" firstAttribute="leading" secondItem="70m-HB-VMk" secondAttribute="leading" id="ugR-xD-DSM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="70m-HB-VMk"/>
                     </view>
                     <navigationItem key="navigationItem" id="qlG-Rq-om4"/>
                     <connections>
+                        <outlet property="displayInfoToUser" destination="8yU-pv-cEY" id="tbw-mD-7vm"/>
                         <outlet property="heightSegmentedControl" destination="7ve-mJ-Of6" id="ak7-g9-9RN"/>
                         <outlet property="heightTextField" destination="8av-yd-0dM" id="Rju-tn-TBV"/>
                         <outlet property="weightSegmentedControl" destination="JOw-04-cus" id="53v-WW-aum"/>
