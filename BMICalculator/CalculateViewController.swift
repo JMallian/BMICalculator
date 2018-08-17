@@ -34,10 +34,14 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     
     func textFieldShouldClear(_ textField: UITextField) -> Bool {
         //use this to clear default text the first time user enters something?
+        return true
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         //only want user to enter whole numbers
+        let allowedSet = NSCharacterSet(charactersIn: "0123456789")
+        let inputSet = NSCharacterSet(charactersIn: string)
+        return allowedSet.isSuperset(of: inputSet as CharacterSet)
     }
     
 
