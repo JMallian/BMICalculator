@@ -41,9 +41,12 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     //MARK calculate button methods
     @IBAction func calculateButtonPressed(_ sender: Any) {
         if(bothTextFieldsHaveInput()) {
-            let vc = ResultsViewController();
-            vc.view.backgroundColor = .blue //temp, actually need to pass it a bmi
-            navigationController?.pushViewController(vc, animated: true)
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ResultsVC")
+            vc?.view.backgroundColor = .blue //temp, actually need to pass it a bmi
+            //TODO: clean up thse optionals? I don't know
+            if let navigationController = navigationController {
+                navigationController.pushViewController(vc!, animated: true)
+            }
             
         }else{
             tellUserToEnterInput()
