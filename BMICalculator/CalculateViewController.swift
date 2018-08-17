@@ -19,6 +19,8 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDelegates()
+        setupKeyboards()
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,6 +52,11 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     func setupDelegates() {
         self.heightTextField.delegate = self
         self.weightTextField.delegate = self
+    }
+    
+    func setupKeyboards() {
+        heightTextField.keyboardType = .numbersAndPunctuation
+        weightTextField.keyboardType = .numbersAndPunctuation
     }
 
 }
