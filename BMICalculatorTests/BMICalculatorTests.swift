@@ -28,13 +28,23 @@ class BMICalculatorTests: XCTestCase {
     }
     
     func testBMIImperial1() {
-        let bmi = BodyCalculations.getBMI(heightInInches: 66, weightInPounds: 126)
-        XCTAssertEqual(bmi, 20.3)
+        let bmi = BodyCalculations.getBMI(heightInInches: 66, weightInPounds: 124)
+        XCTAssertEqual(bmi, 20.0)
     }
     
-    func testMetrict() {
+    func testMetrict1() {
         let bmi = BodyCalculations.getBMI(heightInCentimeters: 168, weightInKilograms: 56)
         XCTAssertEqual(bmi, 19.8)
+    }
+    
+    func testMetricWeightImperialHeight1() {
+        let bmi = BodyCalculations.getBMI(heightInInches: 66, weightInKilograms: 56)
+        XCTAssertEqual(bmi, 19.9)
+    }
+    
+    func testImperialWeightMetricHeight1() {
+        let bmi = BodyCalculations.getBMI(heightInCentimeters: 168, weightInPounds: 124)
+        XCTAssertEqual(bmi, 19.9)
     }
     
     func testPerformanceExample() {

@@ -9,22 +9,34 @@
 import Foundation
 
 class BodyCalculations {
-    //TODO: probably a bunch of static methods, write tests!
+
     static func getBMI(heightInInches height: Int, weightInPounds weight: Int) -> Double {
         let result = (Double(weight) / Double(height * height)) * 703.0
-        return (result.rounded()) 
+        return (result*10).rounded()/10
     }
     
     static func getBMI(heightInCentimeters height: Int, weightInKilograms weight: Int) -> Double {
-        let result = (Double(weight) / Double(height * height)) * 703.0
-        return result
+        var height = Double(height)
+        let weight = Double(weight)
+        height = height/100 //centimeters to meters
+        let result = weight / (height * height)
+        return (result*10).rounded()/10
     }
     
     static func getBMI(heightInInches height: Int, weightInKilograms weight: Int) -> Double {
-        return 2
+        var height = Double(height)
+        let weight = Double(weight)
+        height = height * 0.0254 //inches to meters
+        let result = weight / (height * height)
+        return (result*10).rounded()/10
     }
     
     static func getBMI(heightInCentimeters height: Int, weightInPounds weight: Int) -> Double {
-        return 2
+        var height = Double(height)
+        var weight = Double(weight)
+        weight = weight * 0.4535924 //lbs to kg
+        height = height/100 //centimeters to meters 
+        let result = weight / (height * height)
+        return (result*10).rounded()/10
     }
 }
