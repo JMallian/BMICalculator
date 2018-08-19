@@ -43,8 +43,10 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
             //forced unwrapping, I know it's an int, the delegate method only allows numbers
             //and I know the values exist because of the if statement we're in
             //but maybe it could be cleaned up more?
-            //TODO: something...
-            vc.bmiNumberDisplay.text = String(getBMI(height: Int(heightTextField.text!)!, weight: Int(weightTextField.text!)!))
+            let bmi = getBMI(height: Int(heightTextField.text!)!, weight: Int(weightTextField.text!)!)
+            vc.view.backgroundColor = .blue
+            vc.bmiDescriptionDisplay.text = BMI.getDescription(bmi: bmi)
+            vc.bmiNumberDisplay.text = String(bmi)
             if let navigationController = navigationController {
                 navigationController.pushViewController(vc, animated: true)
             }

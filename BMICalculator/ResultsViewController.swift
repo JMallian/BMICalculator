@@ -10,6 +10,4 @@ import UIKit
 class ResultsViewController: UIViewController {
     @IBOutlet weak var bmiNumberDisplay: UILabel!
     @IBOutlet weak var bmiDescriptionDisplay: UILabel!
-    
-    
 }
