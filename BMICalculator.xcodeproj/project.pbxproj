@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C4DED7421299D8A00C98E88 /* BMI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C4DED7321299D8A00C98E88 /* BMI.swift */; };
 		4C6AB9EA2121A96200BFCF14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6AB9E92121A96200BFCF14 /* AppDelegate.swift */; };
 		4C6AB9EC2121A96200BFCF14 /* CalculateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C6AB9EB2121A96200BFCF14 /* CalculateViewController.swift */; };
 		4C6AB9EF2121A96200BFCF14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C6AB9ED2121A96200BFCF14 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C4DED7321299D8A00C98E88 /* BMI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMI.swift; sourceTree = "<group>"; };
 		4C6AB9E62121A96200BFCF14 /* BMICalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BMICalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C6AB9E92121A96200BFCF14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C6AB9EB2121A96200BFCF14 /* CalculateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				4C6AB9F22121A96F00BFCF14 /* LaunchScreen.storyboard */,
 				4C6AB9F52121A96F00BFCF14 /* Info.plist */,
 				4C6ABA172121A9A700BFCF14 /* BodyCalculations.swift */,
+				4C4DED7321299D8A00C98E88 /* BMI.swift */,
 			);
 			path = BMICalculator;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C4DED7421299D8A00C98E88 /* BMI.swift in Sources */,
 				4C6AB9EC2121A96200BFCF14 /* CalculateViewController.swift in Sources */,
 				4C6AB9EA2121A96200BFCF14 /* AppDelegate.swift in Sources */,
 				4C6ABA182121A9A700BFCF14 /* BodyCalculations.swift in Sources */,

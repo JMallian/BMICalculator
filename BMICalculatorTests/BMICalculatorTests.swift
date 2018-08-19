@@ -47,6 +47,72 @@ class BMICalculatorTests: XCTestCase {
         XCTAssertEqual(bmi, 19.9)
     }
     
+    func testBmiDescription1() {
+        let bmiDesc = BMI.getDescription(bmi: 12.0)
+        XCTAssertEqual(bmiDesc, "Very Severely Underweight")
+    }
+    
+    func testBmiDescription2() {
+        let bmiDesc = BMI.getDescription(bmi: 15.2)
+        XCTAssertEqual(bmiDesc, "Severely Underweight")
+    }
+    
+    func testBmiDescription3() {
+        let bmiDesc = BMI.getDescription(bmi: 18.2)
+        XCTAssertEqual(bmiDesc, "Underweight")
+    }
+    
+    func testBmiDescription4() {
+        let bmiDesc = BMI.getDescription(bmi: 20.0)
+        XCTAssertEqual(bmiDesc, "Normal (healthy weight)")
+    }
+    
+    func testBmiDescription5() {
+        let bmiDesc = BMI.getDescription(bmi: 25.2)
+        XCTAssertEqual(bmiDesc, "Overweight")
+    }
+    
+    func testBmiDescription6() {
+        let bmiDesc = BMI.getDescription(bmi: 33.3)
+        XCTAssertEqual(bmiDesc, "Obese Class I (moderately obese)")
+    }
+    
+    func testBmiDescription7() {
+        let bmiDesc = BMI.getDescription(bmi: 39.2)
+        XCTAssertEqual(bmiDesc, "Obese Class II (severely obese)")
+    }
+    
+    func testBmiDescription8() {
+        let bmiDesc = BMI.getDescription(bmi: 44.2)
+        XCTAssertEqual(bmiDesc, "Obese Class III (very severely obese)")
+    }
+    
+    func testBmiDescription9() {
+        let bmiDesc = BMI.getDescription(bmi: 48.3)
+        XCTAssertEqual(bmiDesc, "Obese Class IV (morbidly obese)")
+    }
+    
+    func testBmiDescription10() {
+        let bmiDesc = BMI.getDescription(bmi: 58.3)
+        XCTAssertEqual(bmiDesc, "Obese Class V (super obese)")
+    }
+    
+    func testBmiDescription11() {
+        let bmiDesc = BMI.getDescription(bmi: 60.0)
+        XCTAssertEqual(bmiDesc, "Obese Class V (super obese)")
+    }
+    
+    func testBmiDescription12() {
+        let bmiDesc = BMI.getDescription(bmi: 65.2532)
+        XCTAssertEqual(bmiDesc, "Obese Class VI (hyper obese)")
+    }
+    
+    func testBmiDescription13() {
+        let bmiDesc = BMI.getDescription(bmi: 24.3423)
+        XCTAssertEqual(bmiDesc, "Normal (healthy weight)")
+    }
+
+    
     func testPerformanceExample() {
         // This is an example of a performance test case.
         self.measure {

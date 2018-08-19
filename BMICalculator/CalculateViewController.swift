@@ -17,9 +17,6 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     
     let heightPlaceholderText = "height in inches or centimeters"
     let weightPlaceholderText = "weight in lbs or kilograms"
-
-    //TODO: user is not told in what measurement to enter numbers, only what system
-    //input should be inches or cm/lbs or kg
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,7 +40,6 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     @IBAction func calculateButtonPressed(_ sender: Any) {
         if(bothTextFieldsHaveInput()) {
             let vc = storyboard?.instantiateViewController(withIdentifier: "ResultsVC") as! ResultsViewController
-            vc.view.backgroundColor = .blue //temp, actually need to pass it a bmi
             //forced unwrapping, I know it's an int, the delegate method only allows numbers
             //and I know the values exist because of the if statement we're in
             //but maybe it could be cleaned up more?
