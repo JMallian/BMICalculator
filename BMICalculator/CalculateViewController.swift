@@ -44,7 +44,8 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
             //and I know the values exist because of the if statement we're in
             //but maybe it could be cleaned up more?
             let bmi = getBMI(height: Int(heightTextField.text!)!, weight: Int(weightTextField.text!)!)
-            vc.view.backgroundColor = .blue
+            //TODO: don't access another VCs IBObjects https://stackoverflow.com/questions/28344336/how-to-access-an-iboutlet-from-another-class
+            vc.view.backgroundColor = .blue //the next 2 lines will crash if I don't have this?
             vc.bmiDescriptionDisplay.text = BMI.getDescription(bmi: bmi)
             vc.bmiNumberDisplay.text = String(bmi)
             if let navigationController = navigationController {
