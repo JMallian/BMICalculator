@@ -15,10 +15,11 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var weightSegmentedControl: UISegmentedControl!
     @IBOutlet weak var displayInfoToUser: UILabel!
     
-    let heightPlaceholderText = "Height"
-    let weightPlaceholderText = "Weight"
+    let heightPlaceholderText = "height in inches or centimeters"
+    let weightPlaceholderText = "weight in lbs or kilograms"
 
-    
+    //TODO: user is not told in what measurement to enter numbers, only what system
+    //input should be inches or cm/lbs or kg
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,13 +42,16 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     //MARK calculate button methods
     @IBAction func calculateButtonPressed(_ sender: Any) {
         if(bothTextFieldsHaveInput()) {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "ResultsVC")
-            vc?.view.backgroundColor = .blue //temp, actually need to pass it a bmi
-            //TODO: clean up thse optionals? I don't know
+            let vc = storyboard?.instantiateViewController(withIdentifier: "ResultsVC") as! ResultsViewController
+            vc.view.backgroundColor = .blue //temp, actually need to pass it a bmi
+            //forced unwrapping, I know it's an int, the delegate method only allows numbers
+            //and I know the values exist because of the if statement we're in
+            //but maybe it could be cleaned up more?
+            //TODO: something...
+            vc.bmiNumberDisplay.text = String(getBMI(height: Int(heightTextField.text!)!, weight: Int(weightTextField.text!)!))
             if let navigationController = navigationController {
-                navigationController.pushViewController(vc!, animated: true)
+                navigationController.pushViewController(vc, animated: true)
             }
-            
         }else{
             tellUserToEnterInput()
         }

@@ -187,6 +187,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="r1B-zo-mI5"/>
                     </view>
+                    <connections>
+                        <outlet property="bmiDescriptionDisplay" destination="mxF-Uz-n2x" id="MXe-74-nyD"/>
+                        <outlet property="bmiNumberDisplay" destination="4tk-wB-yc1" id="9Gp-1n-a7B"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z83-br-gxX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
