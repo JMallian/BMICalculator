@@ -138,5 +138,13 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
         }
         return bmi
     }
+    
+    //TODO:
+    //text could be bigger in UISegmentControlls
+    //horizontal orientation doesn't look good
+    //different color scheme overall might be nice
+    //keyboard comes close to covering lables in horizontal orientation and will cover textfields in horizontal
+    //consider using alerts to alert the user to not entering input in a textfield when hitting calculate
+    
 }
 
