@@ -9,8 +9,13 @@
 import UIKit
 
 class BMI: NSObject {
+    let bmi: Double
     
-    static func getDescription(bmi: Double) -> String {
+    init(bmi: Double) {
+        self.bmi = bmi
+    }
+    
+    func getDescription(bmi: Double) -> String {
         if bmi <= 15.0 {
             return "Very Severely Underweight"
         }else if bmi <= 16.0 {

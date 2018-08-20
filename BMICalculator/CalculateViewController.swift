@@ -40,14 +40,9 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     @IBAction func calculateButtonPressed(_ sender: Any) {
         if(bothTextFieldsHaveInput()) {
             let vc = storyboard?.instantiateViewController(withIdentifier: "ResultsVC") as! ResultsViewController
-            //forced unwrapping, I know it's an int, the delegate method only allows numbers
-            //and I know the values exist because of the if statement we're in
-            //but maybe it could be cleaned up more?
             let bmi = getBMI(height: Int(heightTextField.text!)!, weight: Int(weightTextField.text!)!)
-            //TODO: don't access another VCs IBObjects https://stackoverflow.com/questions/28344336/how-to-access-an-iboutlet-from-another-class
-            vc.view.backgroundColor = .blue //the next 2 lines will crash if I don't have this?
-            vc.bmiDescriptionDisplay.text = BMI.getDescription(bmi: bmi)
-            vc.bmiNumberDisplay.text = String(bmi)
+            let model = BMI(bmi: bmi)
+            vc.bmi = model
             if let navigationController = navigationController {
                 navigationController.pushViewController(vc, animated: true)
             }
