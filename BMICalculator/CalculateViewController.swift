@@ -56,8 +56,15 @@ class CalculateViewController: UIViewController, UITextFieldDelegate {
     }
     
     func tellUserToEnterInput() {
-        //TODO: make this look better (text bigger!), indicate which textField needs info
-        displayInfoToUser.text = "hey there, enter some info"
+        var message = ""
+        if(heightTextField.text == "" && weightTextField.text == "") {
+            message = "Please enter a height and weight."
+        }else if(heightTextField.text == "") {
+            message = "Please enter a height."
+        }else{
+            message = "Please enter a weight"
+        }
+        displayInfoToUser.text = message
     }
     
 
